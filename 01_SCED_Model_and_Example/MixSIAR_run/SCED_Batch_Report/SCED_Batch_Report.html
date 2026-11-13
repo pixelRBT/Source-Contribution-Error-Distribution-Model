@@ -1,0 +1,80 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SCED | Batch prediction summary</title>
+<style>
+body{margin:0;background:#f2f5f9;color:#172a3e;font-family:Arial,Helvetica,sans-serif}
+main{max-width:1120px;margin:28px auto;background:white;padding:30px 36px;border-radius:13px;box-shadow:0 10px 46px #20394d17}
+h1{font-size:28px;margin:7px 0 7px}h2{font-size:17px;margin:25px 0 10px}
+p{line-height:1.55;color:#57687b}small{color:#738499}.kicker{font-size:11px;letter-spacing:1.7px;font-weight:800;color:#20768a;text-transform:uppercase}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0}
+.stat{padding:17px 19px;background:#f3f7f9;border-radius:10px}.stat strong{font-size:28px;display:block}.stat span{font-size:11px;color:#607389}
+.panel{border:1px solid #e0e6ed;padding:20px;border-radius:10px}.barline{display:grid;grid-template-columns:200px 1fr 70px;gap:15px;align-items:center;padding:7px 0}
+.barlabel{font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.track{height:11px;border-radius:12px;background:#ecf1f5;overflow:hidden}
+.bar{height:100%;background:#27768d;border-radius:12px}.number{text-align:right;font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}
+table{border-collapse:collapse;width:100%;font-size:12px}th{text-align:left;color:#5b6c7d;background:#f1f6f9;text-transform:uppercase;font-size:10px;letter-spacing:.4px}
+td,th{padding:11px 9px;border-bottom:1px solid #e9edf2}a{color:#1f7590;text-decoration:none;font-weight:700}a:hover{text-decoration:underline}
+.explain{max-width:310px;overflow-wrap:anywhere;color:#69798a;font-size:11px}.ok{color:#24785f;font-weight:700}.bad{color:#a94e48;font-weight:700}
+.note{border-top:1px solid #e5eaf0;margin-top:20px;padding-top:11px;font-size:11px}
+@media(max-width:750px){main{margin:0;padding:17px}.stats{grid-template-columns:1fr 1fr}.barline{grid-template-columns:100px 1fr 55px;gap:7px}.panel{overflow-x:auto}}
+@media print{main{margin:0;box-shadow:none}.panel{break-inside:avoid}}
+</style></head><body><main>
+<div class="kicker">SCED | Batch source-water error probability assessment</div>
+<h1>SCED prediction | Case overview</h1>
+<p>Each case uses its own MixSIAR posterior and isotope source–mixture geometry. Predictions use the same pre-trained SCED Beta model, without refitting.</p>
+<div class="stats">
+<div class="stat"><strong>24</strong><span>Cases supplied</span></div>
+<div class="stat"><strong>13</strong><span>Cases completed</span></div>
+<div class="stat"><strong>52</strong><span>Sources predicted</span></div>
+</div>
+<h2>Largest source-wise P(AE &gt; 0.20) in each case</h2>
+<div class="panel">
+<div class="barline"><div class="barlabel" title="G021">G021</div><div class="track"><div class="bar" style="width:91.7%"></div></div><div class="number">45.8%</div></div>
+<div class="barline"><div class="barlabel" title="G016">G016</div><div class="track"><div class="bar" style="width:85.8%"></div></div><div class="number">42.9%</div></div>
+<div class="barline"><div class="barlabel" title="G020">G020</div><div class="track"><div class="bar" style="width:60.6%"></div></div><div class="number">30.3%</div></div>
+<div class="barline"><div class="barlabel" title="G007">G007</div><div class="track"><div class="bar" style="width:59.6%"></div></div><div class="number">29.8%</div></div>
+<div class="barline"><div class="barlabel" title="G001">G001</div><div class="track"><div class="bar" style="width:53.7%"></div></div><div class="number">26.8%</div></div>
+<div class="barline"><div class="barlabel" title="G017">G017</div><div class="track"><div class="bar" style="width:51.5%"></div></div><div class="number">25.8%</div></div>
+<div class="barline"><div class="barlabel" title="G004">G004</div><div class="track"><div class="bar" style="width:50.6%"></div></div><div class="number">25.3%</div></div>
+<div class="barline"><div class="barlabel" title="G009">G009</div><div class="track"><div class="bar" style="width:47.7%"></div></div><div class="number">23.9%</div></div>
+<div class="barline"><div class="barlabel" title="G018">G018</div><div class="track"><div class="bar" style="width:47.1%"></div></div><div class="number">23.5%</div></div>
+<div class="barline"><div class="barlabel" title="G005">G005</div><div class="track"><div class="bar" style="width:45.9%"></div></div><div class="number">22.9%</div></div>
+<div class="barline"><div class="barlabel" title="G008">G008</div><div class="track"><div class="bar" style="width:40.7%"></div></div><div class="number">20.3%</div></div>
+<div class="barline"><div class="barlabel" title="G015">G015</div><div class="track"><div class="bar" style="width:33.7%"></div></div><div class="number">16.8%</div></div>
+<div class="barline"><div class="barlabel" title="G003">G003</div><div class="track"><div class="bar" style="width:33.1%"></div></div><div class="number">16.5%</div></div>
+<p style="font-size:11px">Each bar is the maximum across sources within that case; differences do not establish actual estimation errors.</p></div>
+<h2>Case results and report links</h2>
+<table><thead><tr><th>Case</th><th>Sources</th><th>Q90(AE) range</th>
+<th>Maximum P(AE &gt; 0.20)</th>
+<th>Status</th><th>Notes</th></tr></thead><tbody>
+<tr><td><a href="Cases/G001/SCED_Probability_Report.html">G001</a></td><td>4</td><td>19.2–29.0 pp</td><td>26.8%</td><td><span class="ok">Completed</span></td><td class="explain">Review applicability notes</td></tr>
+<tr><td>G002</td><td>—</td><td>—</td><td>—</td><td><span class="bad">Failed</span></td><td class="explain">Mixture mean is outside source-means convex hull (Rpos=1.000). Prediction withheld; check source completeness and isotope assumptions.</td></tr>
+<tr><td><a href="Cases/G003/SCED_Probability_Report.html">G003</a></td><td>4</td><td>20.6–24.2 pp</td><td>16.5%</td><td><span class="ok">Completed</span></td><td class="explain">Review applicability notes</td></tr>
+<tr><td><a href="Cases/G004/SCED_Probability_Report.html">G004</a></td><td>4</td><td>18.2–28.3 pp</td><td>25.3%</td><td><span class="ok">Completed</span></td><td class="explain">Review applicability notes</td></tr>
+<tr><td><a href="Cases/G005/SCED_Probability_Report.html">G005</a></td><td>4</td><td>19.1–27.3 pp</td><td>22.9%</td><td><span class="ok">Completed</span></td><td class="explain">Review applicability notes</td></tr>
+<tr><td>G006</td><td>—</td><td>—</td><td>—</td><td><span class="bad">Failed</span></td><td class="explain">Mixture mean is outside source-means convex hull (Rpos=2.143). Prediction withheld; check source completeness and isotope assumptions.</td></tr>
+<tr><td><a href="Cases/G007/SCED_Probability_Report.html">G007</a></td><td>4</td><td>20.5–30.2 pp</td><td>29.8%</td><td><span class="ok">Completed</span></td><td class="explain">Review applicability notes</td></tr>
+<tr><td><a href="Cases/G008/SCED_Probability_Report.html">G008</a></td><td>4</td><td>20.5–26.1 pp</td><td>20.3%</td><td><span class="ok">Completed</span></td><td class="explain">Review applicability notes</td></tr>
+<tr><td><a href="Cases/G009/SCED_Probability_Report.html">G009</a></td><td>4</td><td>19.1–27.7 pp</td><td>23.9%</td><td><span class="ok">Completed</span></td><td class="explain">Review applicability notes</td></tr>
+<tr><td>G010</td><td>—</td><td>—</td><td>—</td><td><span class="bad">Failed</span></td><td class="explain">Mixture mean is outside source-means convex hull (Rpos=1.320). Prediction withheld; check source completeness and isotope assumptions.</td></tr>
+<tr><td>G011</td><td>—</td><td>—</td><td>—</td><td><span class="bad">Failed</span></td><td class="explain">Mixture mean is outside source-means convex hull (Rpos=1.277). Prediction withheld; check source completeness and isotope assumptions.</td></tr>
+<tr><td>G012</td><td>—</td><td>—</td><td>—</td><td><span class="bad">Failed</span></td><td class="explain">Mixture mean is outside source-means convex hull (Rpos=2.553). Prediction withheld; check source completeness and isotope assumptions.</td></tr>
+<tr><td>G013</td><td>—</td><td>—</td><td>—</td><td><span class="bad">Failed</span></td><td class="explain">Mixture mean is outside source-means convex hull (Rpos=1.648). Prediction withheld; check source completeness and isotope assumptions.</td></tr>
+<tr><td>G014</td><td>—</td><td>—</td><td>—</td><td><span class="bad">Failed</span></td><td class="explain">Mixture mean is outside source-means convex hull (Rpos=12.573). Prediction withheld; check source completeness and isotope assumptions.</td></tr>
+<tr><td><a href="Cases/G015/SCED_Probability_Report.html">G015</a></td><td>4</td><td>20.9–24.3 pp</td><td>16.8%</td><td><span class="ok">Completed</span></td><td class="explain">Review applicability notes</td></tr>
+<tr><td><a href="Cases/G016/SCED_Probability_Report.html">G016</a></td><td>4</td><td>19.2–35.1 pp</td><td>42.9%</td><td><span class="ok">Completed</span></td><td class="explain">Review applicability notes</td></tr>
+<tr><td><a href="Cases/G017/SCED_Probability_Report.html">G017</a></td><td>4</td><td>18.8–28.6 pp</td><td>25.8%</td><td><span class="ok">Completed</span></td><td class="explain">Review applicability notes</td></tr>
+<tr><td><a href="Cases/G018/SCED_Probability_Report.html">G018</a></td><td>4</td><td>20.1–27.6 pp</td><td>23.5%</td><td><span class="ok">Completed</span></td><td class="explain">Review applicability notes</td></tr>
+<tr><td>G019</td><td>—</td><td>—</td><td>—</td><td><span class="bad">Failed</span></td><td class="explain">Mixture mean is outside source-means convex hull (Rpos=2.164). Prediction withheld; check source completeness and isotope assumptions.</td></tr>
+<tr><td><a href="Cases/G020/SCED_Probability_Report.html">G020</a></td><td>4</td><td>23.6–30.4 pp</td><td>30.3%</td><td><span class="ok">Completed</span></td><td class="explain">Review applicability notes</td></tr>
+<tr><td><a href="Cases/G021/SCED_Probability_Report.html">G021</a></td><td>4</td><td>22.3–36.1 pp</td><td>45.8%</td><td><span class="ok">Completed</span></td><td class="explain">Review applicability notes</td></tr>
+<tr><td>G022</td><td>—</td><td>—</td><td>—</td><td><span class="bad">Failed</span></td><td class="explain">Mixture mean is outside source-means convex hull (Rpos=2.019). Prediction withheld; check source completeness and isotope assumptions.</td></tr>
+<tr><td>G023</td><td>—</td><td>—</td><td>—</td><td><span class="bad">Failed</span></td><td class="explain">Mixture mean is outside source-means convex hull (Rpos=2.528). Prediction withheld; check source completeness and isotope assumptions.</td></tr>
+<tr><td>G024</td><td>—</td><td>—</td><td>—</td><td><span class="bad">Failed</span></td><td class="explain">Mixture mean is outside source-means convex hull (Rpos=1.253). Prediction withheld; check source completeness and isotope assumptions.</td></tr>
+</tbody></table>
+<div class="note">
+<p><strong>Model scope:</strong> two water isotopes (d²H and d¹⁸O), 3–7 sources, ungrouped MixSIAR estimates, zero discrimination and no concentration dependence. Zero discrimination is assumed, not independently verified. SCED outputs are conditional error predictions, not field-observed estimation errors.</p>
+<p>Inputs listed in 
+Case_List.csv
+. Select a completed case above to open its complete illustrated report. 
+Full source-wise predictions are in <strong>SCED_All_Source_Predictions.csv</strong>.</p></div>
+</main></body></html>

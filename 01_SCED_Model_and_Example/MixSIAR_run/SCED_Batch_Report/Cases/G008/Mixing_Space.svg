@@ -1,0 +1,37 @@
+<svg viewBox="0 0 570 335" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Source isotope space and observed mixture mean">
+<line x1="72.00" y1="32.00" x2="72.00" y2="275.00" stroke="#dfe6ee" />
+<line x1="72.00" y1="32.00" x2="540.00" y2="32.00" stroke="#dfe6ee" />
+<text x="72.00" y="297.00" font-size="10.00" fill="#344258" text-anchor="middle" font-weight="normal" font-family="Arial, sans-serif">-9.7</text>
+<text x="61.00" y="35.00" font-size="10.00" fill="#344258" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">-54.5</text>
+<line x1="189.00" y1="32.00" x2="189.00" y2="275.00" stroke="#dfe6ee" />
+<line x1="72.00" y1="92.75" x2="540.00" y2="92.75" stroke="#dfe6ee" />
+<text x="189.00" y="297.00" font-size="10.00" fill="#344258" text-anchor="middle" font-weight="normal" font-family="Arial, sans-serif">-8.9</text>
+<text x="61.00" y="95.75" font-size="10.00" fill="#344258" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">-59.3</text>
+<line x1="306.00" y1="32.00" x2="306.00" y2="275.00" stroke="#dfe6ee" />
+<line x1="72.00" y1="153.50" x2="540.00" y2="153.50" stroke="#dfe6ee" />
+<text x="306.00" y="297.00" font-size="10.00" fill="#344258" text-anchor="middle" font-weight="normal" font-family="Arial, sans-serif">-8.1</text>
+<text x="61.00" y="156.50" font-size="10.00" fill="#344258" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">-64</text>
+<line x1="423.00" y1="32.00" x2="423.00" y2="275.00" stroke="#dfe6ee" />
+<line x1="72.00" y1="214.25" x2="540.00" y2="214.25" stroke="#dfe6ee" />
+<text x="423.00" y="297.00" font-size="10.00" fill="#344258" text-anchor="middle" font-weight="normal" font-family="Arial, sans-serif">-7.3</text>
+<text x="61.00" y="217.25" font-size="10.00" fill="#344258" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">-68.8</text>
+<line x1="540.00" y1="32.00" x2="540.00" y2="275.00" stroke="#dfe6ee" />
+<line x1="72.00" y1="275.00" x2="540.00" y2="275.00" stroke="#dfe6ee" />
+<text x="540.00" y="297.00" font-size="10.00" fill="#344258" text-anchor="middle" font-weight="normal" font-family="Arial, sans-serif">-6.5</text>
+<text x="61.00" y="278.00" font-size="10.00" fill="#344258" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">-73.5</text>
+<line x1="72.00" y1="32.00" x2="72.00" y2="275.00" stroke="#738296" />
+<line x1="72.00" y1="275.00" x2="540.00" y2="275.00" stroke="#738296" />
+<polygon points="200.45,218.83 111.00,254.75 411.29,76.44 501.00,52.25 200.45,218.83" fill="#d9edf3" fill-opacity=".43" stroke="#6e9fb0" stroke-width="1.7"/>
+<circle cx="501.00" cy="52.25" r="5.2" fill="#256b8e" stroke="#fff" stroke-width="1.3"/>
+<text x="510.00" y="43.25" font-size="11.00" fill="#256b8e" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">0-40</text>
+<circle cx="200.45" cy="218.83" r="5.2" fill="#d98248" stroke="#fff" stroke-width="1.3"/>
+<text x="209.45" y="209.83" font-size="11.00" fill="#d98248" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">140-240</text>
+<circle cx="111.00" cy="254.75" r="5.2" fill="#36866b" stroke="#fff" stroke-width="1.3"/>
+<text x="120.00" y="245.75" font-size="11.00" fill="#36866b" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">240-320</text>
+<circle cx="411.29" cy="76.44" r="5.2" fill="#7659a3" stroke="#fff" stroke-width="1.3"/>
+<text x="420.29" y="67.44" font-size="11.00" fill="#7659a3" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">40-140</text>
+<polygon points="277.34,161.17 284.34,168.17 277.34,175.17 270.34,168.17" fill="#1c2938" stroke="#fff" stroke-width="1.8"/>
+<text x="289.34" y="185.17" font-size="11.00" fill="#1c2938" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Mixture mean</text>
+<text x="306.00" y="323.00" font-size="12.00" fill="#344258" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">d18O (per mil)</text>
+<text x="15.00" y="20.00" font-size="12.00" fill="#344258" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">d2H (per mil)</text>
+</svg>

@@ -1,0 +1,205 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SCED | Source contribution error report</title>
+<style>
+:root{--ink:#16293e;--muted:#59697c;--border:#dde5ec;--teal:#1d6d87;--paper:#ffffff;--bg:#f4f7fa}
+*{box-sizing:border-box}body{font-family:Arial,"Helvetica Neue",sans-serif;background:var(--bg);color:var(--ink);margin:0}
+main{max-width:1190px;margin:30px auto;background:#fff;padding:32px 40px 36px;box-shadow:0 14px 55px #213c5520;border-radius:12px}
+.kicker{text-transform:uppercase;letter-spacing:1.8px;color:var(--teal);font-size:11px;font-weight:800}
+h1{font-size:29px;line-height:1.15;margin:9px 0 8px;letter-spacing:-.6px}h2{font-size:17px;margin:0 0 4px}
+p{color:#415368;line-height:1.5;margin:5px 0}.muted{color:var(--muted)}
+.header{display:flex;gap:20px;justify-content:space-between;align-items:start;border-bottom:2px solid var(--ink);padding-bottom:20px}
+.tag{border:1px solid var(--border);border-radius:20px;padding:7px 13px;font-size:11px;color:#465b71;white-space:nowrap}
+.meta{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0 24px}
+.metric{background:#f4f7fa;border-radius:9px;padding:13px 17px;flex:1;min-width:175px}
+.metric label{display:block;text-transform:uppercase;letter-spacing:.8px;font-size:10px;font-weight:700;color:#607085;margin-bottom:7px}
+.metric strong{font-size:21px;font-variant-numeric:tabular-nums}.metric small{font-size:11px;color:#647487}
+.plots{display:grid;grid-template-columns:1fr 1fr;gap:20px}.panel{border:1px solid var(--border);border-radius:10px;padding:16px 17px 9px;min-width:0}
+.panel svg{width:100%;height:auto;display:block}.sub{font-size:12px;color:#607085;margin-bottom:4px}
+.legend{display:flex;gap:8px 17px;flex-wrap:wrap;margin-top:15px;font-size:11px;color:#405168}
+.legenditem{white-space:nowrap}.swatch{width:10px;height:10px;border-radius:3px;display:inline-block;margin-right:5px}
+.results{margin-top:24px}table{border-collapse:collapse;width:100%;font-size:12px;margin-top:12px}
+th{text-align:left;background:#f2f6f9;color:#455b6e;text-transform:uppercase;font-size:10px;letter-spacing:.4px;padding:11px 9px;border-bottom:1px solid #d7e3eb}
+td{padding:12px 9px;border-bottom:1px solid #e9edf2}.mono{font-variant-numeric:tabular-nums;white-space:nowrap}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px}.sourcelabel{color:#536578;font-size:11px}
+.risktrack{display:inline-block;width:57px;height:6px;background:#e9eef3;border-radius:6px;margin-left:8px;vertical-align:middle;overflow:hidden}
+.risktrack span{display:block;height:100%;border-radius:6px}
+.explainer{padding:13px 18px;background:#eff6f8;border-left:3px solid #3e8293;border-radius:0 7px 7px 0;margin-top:17px;font-size:12px;line-height:1.6;color:#345268}
+.notes{margin-top:21px;border-top:1px solid var(--border);padding-top:15px}.notes h2{font-size:14px}
+.notes ul{font-size:11px;line-height:1.55;color:#637286;margin-top:8px;padding-left:20px}.notes li{margin:3px 0}
+details{margin-top:16px;border-top:1px dashed var(--border);font-size:11px;padding-top:12px;color:#516174}summary{cursor:pointer;font-weight:700;color:#315369}
+.params{display:grid;grid-template-columns:1fr 1fr;gap:20px}.params table{font-size:10px}.params td{padding:5px}
+.footer{font-size:10px;color:#8090a0;margin-top:19px;border-top:1px solid #e5ebef;padding-top:10px;line-height:1.6}
+@media(max-width:760px){main{margin:0;padding:20px;border-radius:0}.header{display:block}.tag{display:inline-block;margin-top:8px}.plots,.params{grid-template-columns:1fr}.results{overflow-x:auto}}
+@media print{body{background:white}main{box-shadow:none;margin:0;padding:10px 12px;max-width:none}.panel{break-inside:avoid}.notes,details{break-inside:avoid}.metric{background:#f4f7fa!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}td,th{padding:8px 7px}.plots{gap:12px}.panel{padding:9px}}
+</style></head><body><main>
+<div class="header"><div><div class="kicker">
+G007
+ · SCED · isotope mixing assessment</div>
+<h1>SCED: Error risk in MixSIAR source estimates</h1>
+<p>Source-specific predictions of the magnitude and probability of absolute estimation error.</p></div>
+<div class="tag">
+Check applicability notes
+</div></div>
+<section class="meta">
+<div class="metric"><label>Sources</label><strong>
+4
+</strong><small> / one mixing case</small></div>
+<div class="metric"><label>Mixture observations</label><strong>
+2
+</strong><small> paired isotopes</small></div>
+<div class="metric"><label>90% AE level · range</label><strong>
+20.5–30.2
+</strong><small> percentage points</small></div>
+<div class="metric"><label>P(AE &gt; 
+0.20
+) · range</label><strong>
+10.7–29.8
+</strong><small> % across sources</small></div></section>
+<div class="plots">
+<section class="panel"><h2>1 · Mixing space</h2><div class="sub">Paired source isotope means and observed mixture mean</div>
+<svg viewBox="0 0 570 335" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Source isotope space and observed mixture mean">
+<line x1="72.00" y1="32.00" x2="72.00" y2="275.00" stroke="#dfe6ee" />
+<line x1="72.00" y1="32.00" x2="540.00" y2="32.00" stroke="#dfe6ee" />
+<text x="72.00" y="297.00" font-size="10.00" fill="#344258" text-anchor="middle" font-weight="normal" font-family="Arial, sans-serif">-9.2</text>
+<text x="61.00" y="35.00" font-size="10.00" fill="#344258" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">-52.8</text>
+<line x1="189.00" y1="32.00" x2="189.00" y2="275.00" stroke="#dfe6ee" />
+<line x1="72.00" y1="92.75" x2="540.00" y2="92.75" stroke="#dfe6ee" />
+<text x="189.00" y="297.00" font-size="10.00" fill="#344258" text-anchor="middle" font-weight="normal" font-family="Arial, sans-serif">-8.4</text>
+<text x="61.00" y="95.75" font-size="10.00" fill="#344258" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">-57.9</text>
+<line x1="306.00" y1="32.00" x2="306.00" y2="275.00" stroke="#dfe6ee" />
+<line x1="72.00" y1="153.50" x2="540.00" y2="153.50" stroke="#dfe6ee" />
+<text x="306.00" y="297.00" font-size="10.00" fill="#344258" text-anchor="middle" font-weight="normal" font-family="Arial, sans-serif">-7.5</text>
+<text x="61.00" y="156.50" font-size="10.00" fill="#344258" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">-62.9</text>
+<line x1="423.00" y1="32.00" x2="423.00" y2="275.00" stroke="#dfe6ee" />
+<line x1="72.00" y1="214.25" x2="540.00" y2="214.25" stroke="#dfe6ee" />
+<text x="423.00" y="297.00" font-size="10.00" fill="#344258" text-anchor="middle" font-weight="normal" font-family="Arial, sans-serif">-6.6</text>
+<text x="61.00" y="217.25" font-size="10.00" fill="#344258" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">-68</text>
+<line x1="540.00" y1="32.00" x2="540.00" y2="275.00" stroke="#dfe6ee" />
+<line x1="72.00" y1="275.00" x2="540.00" y2="275.00" stroke="#dfe6ee" />
+<text x="540.00" y="297.00" font-size="10.00" fill="#344258" text-anchor="middle" font-weight="normal" font-family="Arial, sans-serif">-5.7</text>
+<text x="61.00" y="278.00" font-size="10.00" fill="#344258" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">-73</text>
+<line x1="72.00" y1="32.00" x2="72.00" y2="275.00" stroke="#738296" />
+<line x1="72.00" y1="275.00" x2="540.00" y2="275.00" stroke="#738296" />
+<polygon points="111.00,254.75 174.85,192.03 312.42,91.62 501.00,52.25 111.00,254.75" fill="#d9edf3" fill-opacity=".43" stroke="#6e9fb0" stroke-width="1.7"/>
+<circle cx="501.00" cy="52.25" r="5.2" fill="#256b8e" stroke="#fff" stroke-width="1.3"/>
+<text x="510.00" y="43.25" font-size="11.00" fill="#256b8e" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">0-40</text>
+<circle cx="174.85" cy="192.03" r="5.2" fill="#d98248" stroke="#fff" stroke-width="1.3"/>
+<text x="183.85" y="183.03" font-size="11.00" fill="#d98248" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">140-240</text>
+<circle cx="111.00" cy="254.75" r="5.2" fill="#36866b" stroke="#fff" stroke-width="1.3"/>
+<text x="120.00" y="245.75" font-size="11.00" fill="#36866b" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">240-320</text>
+<circle cx="312.42" cy="91.62" r="5.2" fill="#7659a3" stroke="#fff" stroke-width="1.3"/>
+<text x="321.42" y="82.62" font-size="11.00" fill="#7659a3" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">40-140</text>
+<polygon points="248.73,143.27 255.73,150.27 248.73,157.27 241.73,150.27" fill="#1c2938" stroke="#fff" stroke-width="1.8"/>
+<text x="260.73" y="167.27" font-size="11.00" fill="#1c2938" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Mixture mean</text>
+<text x="306.00" y="323.00" font-size="12.00" fill="#344258" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">d18O (per mil)</text>
+<text x="15.00" y="20.00" font-size="12.00" fill="#344258" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">d2H (per mil)</text>
+</svg>
+</section>
+<section class="panel"><h2>2 · Probability of AE not exceeding x</h2><div class="sub">One conditional Beta distribution for each source</div>
+<svg viewBox="0 0 570 335" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Predicted AE cumulative probability distributions">
+<line x1="65.00" y1="275.00" x2="545.00" y2="275.00" stroke="#dfe6ee" />
+<text x="55.00" y="279.00" font-size="10.00" fill="#344258" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">0%</text>
+<line x1="65.00" y1="226.40" x2="545.00" y2="226.40" stroke="#dfe6ee" />
+<text x="55.00" y="230.40" font-size="10.00" fill="#344258" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">20%</text>
+<line x1="65.00" y1="177.80" x2="545.00" y2="177.80" stroke="#dfe6ee" />
+<text x="55.00" y="181.80" font-size="10.00" fill="#344258" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">40%</text>
+<line x1="65.00" y1="129.20" x2="545.00" y2="129.20" stroke="#dfe6ee" />
+<text x="55.00" y="133.20" font-size="10.00" fill="#344258" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">60%</text>
+<line x1="65.00" y1="80.60" x2="545.00" y2="80.60" stroke="#dfe6ee" />
+<text x="55.00" y="84.60" font-size="10.00" fill="#344258" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">80%</text>
+<line x1="65.00" y1="32.00" x2="545.00" y2="32.00" stroke="#dfe6ee" />
+<text x="55.00" y="36.00" font-size="10.00" fill="#344258" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">100%</text>
+<line x1="65.00" y1="32.00" x2="65.00" y2="275.00" stroke="#dfe6ee" />
+<text x="65.00" y="296.00" font-size="10.00" fill="#344258" text-anchor="middle" font-weight="normal" font-family="Arial, sans-serif">0.00</text>
+<line x1="185.00" y1="32.00" x2="185.00" y2="275.00" stroke="#dfe6ee" />
+<text x="185.00" y="296.00" font-size="10.00" fill="#344258" text-anchor="middle" font-weight="normal" font-family="Arial, sans-serif">0.10</text>
+<line x1="305.00" y1="32.00" x2="305.00" y2="275.00" stroke="#dfe6ee" />
+<text x="305.00" y="296.00" font-size="10.00" fill="#344258" text-anchor="middle" font-weight="normal" font-family="Arial, sans-serif">0.20</text>
+<line x1="425.00" y1="32.00" x2="425.00" y2="275.00" stroke="#dfe6ee" />
+<text x="425.00" y="296.00" font-size="10.00" fill="#344258" text-anchor="middle" font-weight="normal" font-family="Arial, sans-serif">0.29</text>
+<line x1="545.00" y1="32.00" x2="545.00" y2="275.00" stroke="#dfe6ee" />
+<text x="545.00" y="296.00" font-size="10.00" fill="#344258" text-anchor="middle" font-weight="normal" font-family="Arial, sans-serif">0.39</text>
+<line x1="65.00" y1="32.00" x2="65.00" y2="275.00" stroke="#738296" />
+<line x1="65.00" y1="275.00" x2="545.00" y2="275.00" stroke="#738296" />
+<line x1="65.00" y1="56.30" x2="545.00" y2="56.30" stroke="#8995a7" stroke-dasharray="5 5"/>
+<text x="541.00" y="49.30" font-size="10.00" fill="#5c687a" text-anchor="end" font-weight="normal" font-family="Arial, sans-serif">90%</text>
+<line x1="309.56" y1="32.00" x2="309.56" y2="275.00" stroke="#a3aab5" stroke-dasharray="4 5"/>
+<text x="314.56" y="43.00" font-size="10.00" fill="#5c687a" text-anchor="start" font-weight="normal" font-family="Arial, sans-serif">AE = 0.2</text>
+<polyline points="65.00,275.00 66.85,272.37 68.71,269.45 70.56,266.45 72.41,263.40 74.27,260.33 76.12,257.25 77.97,254.17 79.83,251.10 81.68,248.04 83.53,245.00 85.39,241.97 87.24,238.97 89.09,235.99 90.95,233.04 92.80,230.11 94.65,227.20 96.51,224.33 98.36,221.48 100.21,218.66 102.07,215.87 103.92,213.11 105.77,210.39 107.63,207.69 109.48,205.02 111.33,202.38 113.19,199.78 115.04,197.20 116.89,194.66 118.75,192.14 120.60,189.66 122.45,187.21 124.31,184.79 126.16,182.39 128.01,180.03 129.86,177.70 131.72,175.40 133.57,173.13 135.42,170.89 137.28,168.68 139.13,166.50 140.98,164.34 142.84,162.22 144.69,160.12 146.54,158.06 148.40,156.02 150.25,154.00 152.10,152.02 153.96,150.06 155.81,148.14 157.66,146.23 159.52,144.36 161.37,142.51 163.22,140.68 165.08,138.89 166.93,137.12 168.78,135.37 170.64,133.65 172.49,131.95 174.34,130.28 176.20,128.63 178.05,127.01 179.90,125.41 181.76,123.83 183.61,122.28 185.46,120.74 187.32,119.24 189.17,117.75 191.02,116.29 192.88,114.85 194.73,113.42 196.58,112.03 198.44,110.65 200.29,109.29 202.14,107.95 204.00,106.64 205.85,105.34 207.70,104.07 209.56,102.81 211.41,101.57 213.26,100.35 215.12,99.15 216.97,97.97 218.82,96.81 220.68,95.66 222.53,94.54 224.38,93.43 226.24,92.34 228.09,91.26 229.94,90.20 231.80,89.16 233.65,88.14 235.50,87.13 237.36,86.14 239.21,85.16 241.06,84.20 242.92,83.26 244.77,82.33 246.62,81.41 248.47,80.51 250.33,79.62 252.18,78.75 254.03,77.90 255.89,77.05 257.74,76.22 259.59,75.41 261.45,74.61 263.30,73.82 265.15,73.04 267.01,72.28 268.86,71.53 270.71,70.79 272.57,70.06 274.42,69.35 276.27,68.65 278.13,67.96 279.98,67.28 281.83,66.61 283.69,65.96 285.54,65.31 287.39,64.68 289.25,64.06 291.10,63.44 292.95,62.84 294.81,62.25 296.66,61.67 298.51,61.10 300.37,60.54 302.22,59.98 304.07,59.44 305.93,58.91 307.78,58.39 309.63,57.87 311.49,57.37 313.34,56.87 315.19,56.38 317.05,55.90 318.90,55.43 320.75,54.97 322.61,54.52 324.46,54.07 326.31,53.63 328.17,53.20 330.02,52.78 331.87,52.36 333.73,51.95 335.58,51.55 337.43,51.16 339.29,50.77 341.14,50.40 342.99,50.02 344.85,49.66 346.70,49.30 348.55,48.95 350.41,48.60 352.26,48.26 354.11,47.93 355.97,47.60 357.82,47.28 359.67,46.97 361.53,46.66 363.38,46.35 365.23,46.05 367.08,45.76 368.94,45.48 370.79,45.19 372.64,44.92 374.50,44.65 376.35,44.38 378.20,44.12 380.06,43.86 381.91,43.61 383.76,43.37 385.62,43.13 387.47,42.89 389.32,42.66 391.18,42.43 393.03,42.21 394.88,41.99 396.74,41.77 398.59,41.56 400.44,41.35 402.30,41.15 404.15,40.95 406.00,40.76 407.86,40.57 409.71,40.38 411.56,40.20 413.42,40.02 415.27,39.84 417.12,39.67 418.98,39.50 420.83,39.33 422.68,39.17 424.54,39.01 426.39,38.85 428.24,38.70 430.10,38.55 431.95,38.40 433.80,38.26 435.66,38.12 437.51,37.98 439.36,37.84 441.22,37.71 443.07,37.58 444.92,37.45 446.78,37.33 448.63,37.21 450.48,37.09 452.34,36.97 454.19,36.86 456.04,36.74 457.90,36.63 459.75,36.53 461.60,36.42 463.46,36.32 465.31,36.22 467.16,36.12 469.02,36.02 470.87,35.93 472.72,35.84 474.58,35.74 476.43,35.66 478.28,35.57 480.14,35.48 481.99,35.40 483.84,35.32 485.69,35.24 487.55,35.16 489.40,35.09 491.25,35.01 493.11,34.94 494.96,34.87 496.81,34.80 498.67,34.73 500.52,34.66 502.37,34.60 504.23,34.53 506.08,34.47 507.93,34.41 509.79,34.35 511.64,34.29 513.49,34.24 515.35,34.18 517.20,34.12 519.05,34.07 520.91,34.02 522.76,33.97 524.61,33.92 526.47,33.87 528.32,33.82 530.17,33.78 532.03,33.73 533.88,33.69 535.73,33.64 537.59,33.60 539.44,33.56 541.29,33.52 543.15,33.48 545.00,33.44" fill="none" stroke="#256b8e" stroke-width="2.40" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="65.00,275.00 66.85,274.94 68.71,274.80 70.56,274.57 72.41,274.27 74.27,273.90 76.12,273.47 77.97,272.97 79.83,272.42 81.68,271.81 83.53,271.15 85.39,270.44 87.24,269.68 89.09,268.87 90.95,268.02 92.80,267.12 94.65,266.19 96.51,265.22 98.36,264.21 100.21,263.16 102.07,262.08 103.92,260.97 105.77,259.83 107.63,258.65 109.48,257.45 111.33,256.22 113.19,254.97 115.04,253.68 116.89,252.38 118.75,251.05 120.60,249.71 122.45,248.34 124.31,246.95 126.16,245.55 128.01,244.12 129.86,242.68 131.72,241.23 133.57,239.76 135.42,238.27 137.28,236.78 139.13,235.27 140.98,233.75 142.84,232.22 144.69,230.68 146.54,229.13 148.40,227.57 150.25,226.00 152.10,224.43 153.96,222.85 155.81,221.27 157.66,219.68 159.52,218.08 161.37,216.48 163.22,214.88 165.08,213.27 166.93,211.67 168.78,210.06 170.64,208.45 172.49,206.83 174.34,205.22 176.20,203.61 178.05,201.99 179.90,200.38 181.76,198.77 183.61,197.16 185.46,195.56 187.32,193.95 189.17,192.35 191.02,190.75 192.88,189.16 194.73,187.57 196.58,185.98 198.44,184.40 200.29,182.82 202.14,181.24 204.00,179.68 205.85,178.11 207.70,176.56 209.56,175.01 211.41,173.46 213.26,171.92 215.12,170.39 216.97,168.87 218.82,167.35 220.68,165.84 222.53,164.34 224.38,162.85 226.24,161.36 228.09,159.88 229.94,158.41 231.80,156.95 233.65,155.50 235.50,154.05 237.36,152.62 239.21,151.19 241.06,149.77 242.92,148.36 244.77,146.96 246.62,145.57 248.47,144.19 250.33,142.82 252.18,141.46 254.03,140.11 255.89,138.77 257.74,137.44 259.59,136.12 261.45,134.81 263.30,133.51 265.15,132.22 267.01,130.93 268.86,129.66 270.71,128.41 272.57,127.16 274.42,125.92 276.27,124.69 278.13,123.47 279.98,122.26 281.83,121.07 283.69,119.88 285.54,118.70 287.39,117.54 289.25,116.39 291.10,115.24 292.95,114.11 294.81,112.99 296.66,111.87 298.51,110.77 300.37,109.68 302.22,108.60 304.07,107.53 305.93,106.47 307.78,105.43 309.63,104.39 311.49,103.36 313.34,102.34 315.19,101.34 317.05,100.34 318.90,99.36 320.75,98.38 322.61,97.42 324.46,96.46 326.31,95.52 328.17,94.58 330.02,93.66 331.87,92.75 333.73,91.84 335.58,90.95 337.43,90.07 339.29,89.19 341.14,88.33 342.99,87.48 344.85,86.63 346.70,85.80 348.55,84.97 350.41,84.16 352.26,83.35 354.11,82.56 355.97,81.77 357.82,81.00 359.67,80.23 361.53,79.47 363.38,78.72 365.23,77.98 367.08,77.25 368.94,76.53 370.79,75.82 372.64,75.12 374.50,74.42 376.35,73.74 378.20,73.06 380.06,72.39 381.91,71.73 383.76,71.08 385.62,70.44 387.47,69.80 389.32,69.18 391.18,68.56 393.03,67.95 394.88,67.35 396.74,66.76 398.59,66.17 400.44,65.59 402.30,65.03 404.15,64.46 406.00,63.91 407.86,63.36 409.71,62.82 411.56,62.29 413.42,61.77 415.27,61.25 417.12,60.74 418.98,60.24 420.83,59.75 422.68,59.26 424.54,58.78 426.39,58.31 428.24,57.84 430.10,57.38 431.95,56.93 433.80,56.48 435.66,56.04 437.51,55.61 439.36,55.18 441.22,54.76 443.07,54.34 444.92,53.93 446.78,53.53 448.63,53.14 450.48,52.75 452.34,52.36 454.19,51.99 456.04,51.61 457.90,51.25 459.75,50.89 461.60,50.53 463.46,50.18 465.31,49.84 467.16,49.50 469.02,49.17 470.87,48.84 472.72,48.52 474.58,48.20 476.43,47.89 478.28,47.58 480.14,47.28 481.99,46.98 483.84,46.69 485.69,46.40 487.55,46.12 489.40,45.84 491.25,45.56 493.11,45.29 494.96,45.03 496.81,44.77 498.67,44.51 500.52,44.26 502.37,44.02 504.23,43.77 506.08,43.53 507.93,43.30 509.79,43.07 511.64,42.84 513.49,42.62 515.35,42.40 517.20,42.19 519.05,41.98 520.91,41.77 522.76,41.56 524.61,41.36 526.47,41.17 528.32,40.97 530.17,40.78 532.03,40.60 533.88,40.42 535.73,40.24 537.59,40.06 539.44,39.89 541.29,39.72 543.15,39.55 545.00,39.39" fill="none" stroke="#d98248" stroke-width="2.40" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="65.00,275.00 66.85,274.43 68.71,273.51 70.56,272.38 72.41,271.10 74.27,269.71 76.12,268.21 77.97,266.63 79.83,264.98 81.68,263.27 83.53,261.51 85.39,259.69 87.24,257.84 89.09,255.95 90.95,254.02 92.80,252.07 94.65,250.09 96.51,248.09 98.36,246.07 100.21,244.04 102.07,241.99 103.92,239.92 105.77,237.85 107.63,235.77 109.48,233.68 111.33,231.59 113.19,229.49 115.04,227.40 116.89,225.30 118.75,223.20 120.60,221.10 122.45,219.01 124.31,216.92 126.16,214.83 128.01,212.75 129.86,210.67 131.72,208.60 133.57,206.54 135.42,204.49 137.28,202.44 139.13,200.41 140.98,198.38 142.84,196.37 144.69,194.36 146.54,192.37 148.40,190.39 150.25,188.42 152.10,186.46 153.96,184.52 155.81,182.59 157.66,180.67 159.52,178.76 161.37,176.87 163.22,174.99 165.08,173.13 166.93,171.28 168.78,169.45 170.64,167.63 172.49,165.83 174.34,164.04 176.20,162.27 178.05,160.51 179.90,158.77 181.76,157.04 183.61,155.33 185.46,153.64 187.32,151.96 189.17,150.30 191.02,148.65 192.88,147.02 194.73,145.40 196.58,143.80 198.44,142.22 200.29,140.65 202.14,139.10 204.00,137.57 205.85,136.05 207.70,134.55 209.56,133.06 211.41,131.59 213.26,130.13 215.12,128.69 216.97,127.27 218.82,125.86 220.68,124.47 222.53,123.10 224.38,121.74 226.24,120.39 228.09,119.06 229.94,117.75 231.80,116.45 233.65,115.17 235.50,113.90 237.36,112.64 239.21,111.41 241.06,110.18 242.92,108.97 244.77,107.78 246.62,106.60 248.47,105.44 250.33,104.29 252.18,103.15 254.03,102.03 255.89,100.92 257.74,99.83 259.59,98.75 261.45,97.69 263.30,96.64 265.15,95.60 267.01,94.57 268.86,93.56 270.71,92.57 272.57,91.58 274.42,90.61 276.27,89.65 278.13,88.71 279.98,87.77 281.83,86.85 283.69,85.95 285.54,85.05 287.39,84.17 289.25,83.30 291.10,82.44 292.95,81.59 294.81,80.76 296.66,79.93 298.51,79.12 300.37,78.32 302.22,77.53 304.07,76.75 305.93,75.99 307.78,75.23 309.63,74.49 311.49,73.75 313.34,73.03 315.19,72.32 317.05,71.62 318.90,70.92 320.75,70.24 322.61,69.57 324.46,68.91 326.31,68.26 328.17,67.62 330.02,66.98 331.87,66.36 333.73,65.75 335.58,65.14 337.43,64.55 339.29,63.96 341.14,63.39 342.99,62.82 344.85,62.26 346.70,61.71 348.55,61.17 350.41,60.63 352.26,60.11 354.11,59.59 355.97,59.08 357.82,58.58 359.67,58.09 361.53,57.60 363.38,57.13 365.23,56.66 367.08,56.20 368.94,55.74 370.79,55.29 372.64,54.85 374.50,54.42 376.35,54.00 378.20,53.58 380.06,53.17 381.91,52.76 383.76,52.36 385.62,51.97 387.47,51.59 389.32,51.21 391.18,50.83 393.03,50.47 394.88,50.11 396.74,49.76 398.59,49.41 400.44,49.07 402.30,48.73 404.15,48.40 406.00,48.07 407.86,47.76 409.71,47.44 411.56,47.13 413.42,46.83 415.27,46.53 417.12,46.24 418.98,45.95 420.83,45.67 422.68,45.40 424.54,45.12 426.39,44.86 428.24,44.59 430.10,44.34 431.95,44.08 433.80,43.83 435.66,43.59 437.51,43.35 439.36,43.11 441.22,42.88 443.07,42.66 444.92,42.43 446.78,42.21 448.63,42.00 450.48,41.79 452.34,41.58 454.19,41.38 456.04,41.18 457.90,40.98 459.75,40.79 461.60,40.60 463.46,40.42 465.31,40.24 467.16,40.06 469.02,39.89 470.87,39.72 472.72,39.55 474.58,39.38 476.43,39.22 478.28,39.06 480.14,38.91 481.99,38.76 483.84,38.61 485.69,38.46 487.55,38.32 489.40,38.18 491.25,38.04 493.11,37.90 494.96,37.77 496.81,37.64 498.67,37.51 500.52,37.39 502.37,37.27 504.23,37.15 506.08,37.03 507.93,36.91 509.79,36.80 511.64,36.69 513.49,36.58 515.35,36.48 517.20,36.37 519.05,36.27 520.91,36.17 522.76,36.07 524.61,35.98 526.47,35.88 528.32,35.79 530.17,35.70 532.03,35.62 533.88,35.53 535.73,35.45 537.59,35.36 539.44,35.28 541.29,35.20 543.15,35.13 545.00,35.05" fill="none" stroke="#36866b" stroke-width="2.40" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="65.00,275.00 66.85,274.92 68.71,274.72 70.56,274.42 72.41,274.04 74.27,273.58 76.12,273.05 77.97,272.45 79.83,271.78 81.68,271.05 83.53,270.27 85.39,269.44 87.24,268.55 89.09,267.61 90.95,266.63 92.80,265.61 94.65,264.54 96.51,263.44 98.36,262.30 100.21,261.12 102.07,259.91 103.92,258.67 105.77,257.40 107.63,256.10 109.48,254.77 111.33,253.41 113.19,252.03 115.04,250.63 116.89,249.21 118.75,247.76 120.60,246.30 122.45,244.82 124.31,243.32 126.16,241.80 128.01,240.27 129.86,238.73 131.72,237.17 133.57,235.60 135.42,234.02 137.28,232.43 139.13,230.82 140.98,229.21 142.84,227.59 144.69,225.97 146.54,224.33 148.40,222.69 150.25,221.05 152.10,219.40 153.96,217.75 155.81,216.09 157.66,214.43 159.52,212.77 161.37,211.11 163.22,209.44 165.08,207.78 166.93,206.11 168.78,204.45 170.64,202.78 172.49,201.12 174.34,199.46 176.20,197.80 178.05,196.15 179.90,194.49 181.76,192.84 183.61,191.20 185.46,189.56 187.32,187.92 189.17,186.29 191.02,184.66 192.88,183.04 194.73,181.42 196.58,179.81 198.44,178.21 200.29,176.61 202.14,175.02 204.00,173.44 205.85,171.86 207.70,170.30 209.56,168.74 211.41,167.18 213.26,165.64 215.12,164.10 216.97,162.58 218.82,161.06 220.68,159.55 222.53,158.05 224.38,156.55 226.24,155.07 228.09,153.60 229.94,152.14 231.80,150.68 233.65,149.24 235.50,147.81 237.36,146.38 239.21,144.97 241.06,143.57 242.92,142.17 244.77,140.79 246.62,139.42 248.47,138.06 250.33,136.71 252.18,135.37 254.03,134.04 255.89,132.72 257.74,131.41 259.59,130.12 261.45,128.83 263.30,127.56 265.15,126.29 267.01,125.04 268.86,123.80 270.71,122.57 272.57,121.35 274.42,120.14 276.27,118.95 278.13,117.76 279.98,116.59 281.83,115.43 283.69,114.27 285.54,113.13 287.39,112.00 289.25,110.88 291.10,109.78 292.95,108.68 294.81,107.59 296.66,106.52 298.51,105.46 300.37,104.41 302.22,103.36 304.07,102.33 305.93,101.31 307.78,100.31 309.63,99.31 311.49,98.32 313.34,97.35 315.19,96.38 317.05,95.43 318.90,94.48 320.75,93.55 322.61,92.62 324.46,91.71 326.31,90.81 328.17,89.92 330.02,89.04 331.87,88.17 333.73,87.30 335.58,86.45 337.43,85.61 339.29,84.78 341.14,83.96 342.99,83.15 344.85,82.35 346.70,81.56 348.55,80.78 350.41,80.00 352.26,79.24 354.11,78.49 355.97,77.75 357.82,77.01 359.67,76.29 361.53,75.57 363.38,74.87 365.23,74.17 367.08,73.48 368.94,72.80 370.79,72.13 372.64,71.47 374.50,70.82 376.35,70.17 378.20,69.54 380.06,68.91 381.91,68.29 383.76,67.68 385.62,67.08 387.47,66.48 389.32,65.90 391.18,65.32 393.03,64.75 394.88,64.19 396.74,63.64 398.59,63.09 400.44,62.55 402.30,62.02 404.15,61.50 406.00,60.98 407.86,60.47 409.71,59.97 411.56,59.48 413.42,58.99 415.27,58.51 417.12,58.04 418.98,57.57 420.83,57.12 422.68,56.66 424.54,56.22 426.39,55.78 428.24,55.35 430.10,54.92 431.95,54.50 433.80,54.09 435.66,53.68 437.51,53.28 439.36,52.89 441.22,52.50 443.07,52.12 444.92,51.75 446.78,51.38 448.63,51.01 450.48,50.65 452.34,50.30 454.19,49.95 456.04,49.61 457.90,49.28 459.75,48.94 461.60,48.62 463.46,48.30 465.31,47.98 467.16,47.67 469.02,47.37 470.87,47.07 472.72,46.77 474.58,46.48 476.43,46.20 478.28,45.92 480.14,45.64 481.99,45.37 483.84,45.11 485.69,44.84 487.55,44.59 489.40,44.33 491.25,44.08 493.11,43.84 494.96,43.60 496.81,43.36 498.67,43.13 500.52,42.90 502.37,42.68 504.23,42.46 506.08,42.24 507.93,42.03 509.79,41.82 511.64,41.62 513.49,41.42 515.35,41.22 517.20,41.02 519.05,40.83 520.91,40.65 522.76,40.46 524.61,40.28 526.47,40.11 528.32,39.93 530.17,39.76 532.03,39.59 533.88,39.43 535.73,39.27 537.59,39.11 539.44,38.95 541.29,38.80 543.15,38.65 545.00,38.51" fill="none" stroke="#7659a3" stroke-width="2.40" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="305.00" y="324.00" font-size="12.00" fill="#344258" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Absolute error in source contribution (AE)</text>
+<text x="65.00" y="19.00" font-size="12.00" fill="#344258" text-anchor="start" font-weight="bold" font-family="Arial, sans-serif">Probability AE does not exceed x</text>
+</svg>
+</section></div>
+<div class="legend">
+<span class="legenditem"><span class="swatch" style="background:#256b8e"></span><strong>0-40</strong></span>
+<span class="legenditem"><span class="swatch" style="background:#d98248"></span><strong>140-240</strong></span>
+<span class="legenditem"><span class="swatch" style="background:#36866b"></span><strong>240-320</strong></span>
+<span class="legenditem"><span class="swatch" style="background:#7659a3"></span><strong>40-140</strong></span>
+</div>
+<section class="results"><h2>3 · Results you can use</h2>
+<p class="sub">The posterior interval is from your MixSIAR run. AE probabilities are predicted by the fixed SCED model.</p>
+<table><thead><tr><th>Source</th><th>MixSIAR mean</th><th>MixSIAR 95% interval</th>
+<th>W95</th><th>90% AE value</th><th>P(AE &gt; 
+0.20
+)</th></tr></thead><tbody>
+<tr><td><span class="dot" style="background:#256b8e"></span><strong>0-40</strong></td><td>10.6%</td><td class="mono">0.4%–33.4%</td><td class="mono">33.0 pp</td><td class="mono"><strong>20.5 pp</strong></td><td class="mono">10.7% <span class="risktrack"><span style="width:10.7%;background:#256b8e"></span></span></td></tr>
+<tr><td><span class="dot" style="background:#d98248"></span><strong>140-240</strong></td><td>28.9%</td><td class="mono">1.6%–69.3%</td><td class="mono">67.7 pp</td><td class="mono"><strong>30.2 pp</strong></td><td class="mono">29.8% <span class="risktrack"><span style="width:29.8%;background:#d98248"></span></span></td></tr>
+<tr><td><span class="dot" style="background:#36866b"></span><strong>240-320</strong></td><td>24.7%</td><td class="mono">2.0%–55.6%</td><td class="mono">53.6 pp</td><td class="mono"><strong>24.7 pp</strong></td><td class="mono">17.5% <span class="risktrack"><span style="width:17.5%;background:#36866b"></span></span></td></tr>
+<tr><td><span class="dot" style="background:#7659a3"></span><strong>40-140</strong></td><td>35.8%</td><td class="mono">3.6%–66.1%</td><td class="mono">62.6 pp</td><td class="mono"><strong>29.4 pp</strong></td><td class="mono">27.7% <span class="risktrack"><span style="width:27.7%;background:#7659a3"></span></span></td></tr>
+</tbody></table></section>
+<div class="explainer"><strong>How to read this:</strong> A source with a 90% AE value of 20 pp has a model-predicted 90% probability that its absolute contribution error does not exceed 20 percentage points; it is <em>not</em> a guaranteed error bound. 
+P(AE &gt; 
+0.20
+) is the predicted probability that the true contribution differs from the MixSIAR posterior mean by more than 
+20.0 pp
+.</div>
+<section class="notes"><h2>Applicability and limitations</h2><ul>
+<li>The model was developed with 6 mixture observations; this case has 2.</li>
+<li>Source sample sizes differ from nominal n = 6 used in the simulations.</li>
+<li>Zero isotope discrimination is assumed for this case; the discrimination file is not read or checked.</li>
+<li>SCED was evaluated on simulated water mixtures; actual source errors are unknown in this case.</li>
+</ul></section>
+<details><summary>Model provenance, coefficients and standardization</summary>
+<p>Frozen Beta-logit Model C; constant precision &phi; = 
+11.7368842
+. Trained on 
+998
+ simulation scenarios (
+4994
+ source records). Per-scenario total weights were equal. NOS = 3 is the reference.</p>
+<div class="params"><table><tr><th>Model term</th><th>Coefficient</th></tr>
+<tr><td>(Intercept)</td><td>-2.13606694</td></tr>
+<tr><td>NOS4</td><td>0.11848377</td></tr>
+<tr><td>NOS5</td><td>0.01818462</td></tr>
+<tr><td>NOS6</td><td>-0.00154441</td></tr>
+<tr><td>NOS7</td><td>-0.01183354</td></tr>
+<tr><td>z_w</td><td>0.18281983</td></tr>
+<tr><td>z_near</td><td>-0.07041139</td></tr>
+<tr><td>z_rpos</td><td>0.07034169</td></tr>
+<tr><td>z_dfm</td><td>-0.09281725</td></tr>
+<tr><td>z_w:z_rpos</td><td>0.07120642</td></tr>
+</table>
+<table><tr><th>Predictor</th><th>Training mean</th><th>Training SD</th></tr>
+<tr><td>z_near</td><td>-0.36547124</td><td>0.61986561</td></tr>
+<tr><td>z_rpos</td><td>0.50592921</td><td>0.25708103</td></tr>
+<tr><td>z_dfm</td><td>0.34989353</td><td>0.20196545</td></tr>
+<tr><td>z_w</td><td>0.43945516</td><td>0.14250810</td></tr>
+</table></div>
+<p><strong>Predictors:</strong> NOS, W95, log10(Snearest), Rpos, DFM; with W95 &times; Rpos interaction. Source labels follow MixSIAR alphabetical ordering.</p></details>
+<div class="footer">Files: mixture=
+G007mix.csv
+; source=
+G007source.csv
+; posterior=
+G007_rjags.Rdata
+; d2H tracer=
+H
+; d18O tracer=
+O
+. The analysis assumes zero isotope discrimination (not independently checked); it uses no observed true contributions and never refits the model. 
+Predictions are conditional on the simulation-calibrated model and do not constitute independent field validation.</div>
+</main></body></html>
